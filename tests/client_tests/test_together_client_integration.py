@@ -20,7 +20,7 @@ from test_base_client_integration import BaseClientIntegrationTest
 class TestTogetherClientIntegration(BaseClientIntegrationTest):
     CLIENT_CLASS = TogetherClient
     SERVICE_NAME = "together"
-    DEFAULT_MODEL = "meta-llama/Llama-3.2-3B-Instruct-Turbo"
+    DEFAULT_MODEL = "meta-llama/Llama-3.3-70B-Instruct-Turbo"
     
     def test_basic_chat(self):
         """Test basic chat functionality"""

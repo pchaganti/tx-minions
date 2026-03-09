@@ -2732,7 +2732,6 @@ with st.sidebar:
                 "Meta Llama 3.1 405B": "meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo",
                 "DeepSeek-R1": "deepseek-ai/DeepSeek-R1",
                 "QWQ-32B": "Qwen/QwQ-32B-Preview",
-                "Kimi K2 Instruct": "moonshotai/Kimi-K2-Instruct-0905",
             }
             default_model_index = 0
         elif selected_provider == "Perplexity":
