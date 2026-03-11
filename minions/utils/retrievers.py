@@ -244,9 +244,12 @@ class GeminiEmbeddings(BaseEmbeddingModel):
     TASK_TYPES = [
         "SEMANTIC_SIMILARITY",
         "RETRIEVAL_DOCUMENT",
-        "RETRIEVAL_QUERY", 
+        "RETRIEVAL_QUERY",
         "CLASSIFICATION",
         "CLUSTERING",
+        "CODE_RETRIEVAL_QUERY",
+        "QUESTION_ANSWERING",
+        "FACT_VERIFICATION",
     ]
 
     def __new__(cls, model_name=None, task_type=None, output_dimensionality=None):
@@ -307,6 +310,9 @@ class GeminiEmbeddings(BaseEmbeddingModel):
                       - "RETRIEVAL_QUERY": Embed queries for retrieval
                       - "CLASSIFICATION": Embed text for classification
                       - "CLUSTERING": Embed text for clustering
+                      - "CODE_RETRIEVAL_QUERY": Retrieve code blocks
+                      - "QUESTION_ANSWERING": QA system queries
+                      - "FACT_VERIFICATION": Evidence retrieval for claims
             output_dimensionality: Optional output dimension size (128-3072).
                       Recommended values: 768, 1536, 3072.
                       If not specified, defaults to model's full dimension (3072).
@@ -404,6 +410,7 @@ class GeminiEmbeddings(BaseEmbeddingModel):
     def get_available_models() -> List[str]:
         """Get list of available Gemini embedding models."""
         return [
+            "gemini-embedding-2-preview",
             "gemini-embedding-001",
             "text-embedding-004",
         ]
