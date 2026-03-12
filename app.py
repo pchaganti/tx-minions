@@ -2822,6 +2822,7 @@ with st.sidebar:
                 "qwen3-coder:480b-cloud": "qwen3-coder:480b-cloud",
                 "minimax-m2:cloud": "minimax-m2:cloud",
                 "cogito-2.1:671b-cloud": "cogito-2.1:671b-cloud",
+                "nemotron-3-super": "nemotron-3-super:cloud",
             }
             default_model_index = 0
         elif selected_provider == "Secure":
